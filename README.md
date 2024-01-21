@@ -8,5 +8,7 @@ Alternatively you can install nvidia drivers by: `sudo apt install nvidia-driver
     chmod +x cuda.sh
 
 After installing driver if you see blank screen after bootloader:
-1. In grub menu select ubuntu and press e and add `nvidia-drm.modeset=1` to the line where it says cmdline_linux you can read about this [here](https://forums.linuxmint.com/viewtopic.php?t=352940) 
+In grub menu select ubuntu and press e and add `nvidia-drm.modeset=1` to the line where it says linux, you can read about this [here](https://forums.linuxmint.com/viewtopic.php?t=352940) 
+This is just temporary fix for getting display back. dpkg and install the drivers again or whatever you feel.
+
 Tip: If you are from Indian and using JIO as your ISP, nvidia drivers and foxy installation might fail as jio has banned raw.github domain.
