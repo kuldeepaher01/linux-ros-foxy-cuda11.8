@@ -2,6 +2,7 @@
 Clone the repo 
 and add the executable permission to the shell files. 
 For e.g:
+Alternatively you can install nvidia drivers by: `sudo apt install nvidia-driver-5xx` 535,545 or whichever you feel
 
     chmod +x cuda.sh
 
