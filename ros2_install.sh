@@ -49,6 +49,12 @@ fi
 
 echo "Installing chad vim "
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+echo "Checking if VSCode is installed..."
+if ! command -v code &> /dev/null; then
+    echo "VSCode could not be found"
+    echo "Installing VSCode..."
+    sudo snap install code --classic
+fi
 
 echo "DONEEEEEEE ...................."
 echo "Author: github.com/kuldeepaher01"
