@@ -27,6 +27,28 @@ echo "Testing Installlation"
 source /opt/ros/foxy/setup.bash
 ros2 run demo_nodes_cpp talker
 
-# installing pytorch
+echo "Checking if pip3 is installed..."
+if ! command -v pip3 &> /dev/null; then
+    echo "pip3 could not be found"
+    echo "Installing pip3..."
+    sudo apt install -y python3-pip
+fi
+
+echo "Installing PyTorch..."
 pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip3 install stable-baselines3[extra]
+
+echo "ROS 2 Foxy and PyTorch installation completed."
+
+echo "Checking if Neovim is installed..."
+if ! command -v nvim &> /dev/null; then
+    echo "Neovim could not be found"
+    echo "Installing Neovim..."
+    sudo snap install nvim --classic
+fi
+
+echo "Installing chad vim "
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
+
+echo "DONEEEEEEE ...................."
+echo "Author: github.com/kuldeepaher01"
